@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 
 # Read your HTML file
-with open('aaa.htm', 'r', encoding='utf-8') as file:
+with open('aaa.htm', 'r', encoding='utf-8') as file: #this is a html page - https://ncdex.com/markets/spotprices
     html_content = file.read()
 
 # Parse the HTML content
@@ -16,3 +16,4 @@ filtered_options = [option.text.strip() for option in option_tags]
 # Print the extracted option content (text inside the <option> tags)
 for content in filtered_options:
     print(content)
+
